@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مسبحة مُسلم الإلكترونية</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .card {
+            background-color: #001f3f; /* كحلي */
+            color: white;
+            padding: 50px;
+            border-radius: 30px;
+            border: 4px solid #d4af37; /* ذهبي */
+            box-shadow: 0px 15px 30px rgba(0,0,0,0.3);
+            width: 300px;
+        }
+        #counter {
+            font-size: 100px;
+            margin: 20px 0;
+            color: #d4af37;
+            font-weight: bold;
+        }
+        .btn-count {
+            background-color: #d4af37;
+            border: none;
+            padding: 20px;
+            width: 100%;
+            font-size: 28px;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            color: #001f3f;
+            transition: 0.2s;
+        }
+        .btn-count:active {
+            transform: scale(0.95);
+        }
+        .btn-reset {
+            background-color: transparent;
+            color: #ffffff99;
+            border: none;
+            margin-top: 25px;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h2>مسبحة مُسلم</h2>
+        <p>اذكر الله يذكرك</p>
+        
+        <div id="counter">0</div>
+
+        <button class="btn-count" onclick="countUp()">سَبِّح</button>
+        <button class="btn-reset" onclick="resetCounter()">تصفير العداد</button>
+    </div>
+
+    <script>
+        let total = 0;
+        function countUp() {
+            total++;
+            document.getElementById("counter").innerHTML = total;
+        }
+        function resetCounter() {
+            total = 0;
+            document.getElementById("counter").innerHTML = total;
+        }
+    </script>
+
+</body>
+</html>
